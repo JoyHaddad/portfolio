@@ -1,10 +1,9 @@
 import React from "react";
-import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 
 export default function Welcome() {
   return (
-    <div className="h-screen">
+    <div className="h-screen bg-hero-pattern">
       <div className="flex justify-center font-bold text-4xl pt-80">
         Hello, I'm
       </div>
@@ -15,15 +14,14 @@ export default function Welcome() {
         <TypeAnimation
           className="flex justify-center"
           sequence={[
-            // Same substring at the start will only be typed once, initially
-            "I'm a developer",
+            "I'm a <developer/>",
             1000,
             "I'm a debugger",
             1000,
             "I'm a child of God",
             1000,
           ]}
-          speed={10}
+          speed={5}
           deletionSpeed={5}
           style={{ fontSize: "3em" }}
           repeat={Infinity}

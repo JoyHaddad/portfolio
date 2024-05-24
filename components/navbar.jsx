@@ -6,14 +6,16 @@ export default function Navbar() {
   return (
     <div className="fixed w-screen z-10 flex items-center justify-between p-5 bg-bg-color drop-shadow-lg">
       <div className="flex items-center w-full mx-24">
-        <Image
-          className="drop-shadow-lg"
-          src="/joy-logo.svg"
-          alt="Joy Logo"
-          width={200}
-          height={48}
-          priority
-        />
+        <Link href="/#hero">
+          <Image
+            className="drop-shadow-lg"
+            src="/joy-logo.svg"
+            alt="Joy Logo"
+            width={200}
+            height={48}
+            priority
+          />{" "}
+        </Link>
         <div className="flex space-x-7 font-bold ml-auto">
           <Link href="/#projects" className="hover:text-custom-light">
             Projects

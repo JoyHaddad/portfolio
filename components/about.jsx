@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function About() {
   return (
-    <div className="h-screen -mt-36 -mb-10" id="about">
+    <div className="h-screen -mt-32 -mb-10" id="about">
       <div className="mx-32">
         <div className="text-4xl font-bold mb-10">About</div>
         <div className="flex items-center">

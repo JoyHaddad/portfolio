@@ -13,14 +13,14 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <div>
+    <div id="hero">
       <Navbar />
       <Welcome />
-      <div className="h-screen">
+      <div className="h-screen pt-16">
         <div className="text-4xl mx-32 font-bold mb-10" id="projects">
           Projects
         </div>
-        <div className="mx-32 grid grid-rows-1 grid-flow-col gap-4">
+        <div className="mx-32 flex justify-between">
           <Projects
             projectImage={snapChefImg}
             project={{
@@ -51,7 +51,7 @@ export default function Home() {
             project={{
               title: "MediSearch",
               description:
-                "Search engine for any details and warnings for medications listed from the FDA!",
+                "Search engine for any medication details and warnings listed from the FDA!",
               tag1: "Next.js",
               tag2: "OpenFDA",
               tag3: "Tailwind",
