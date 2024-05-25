@@ -1,12 +1,26 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 export default function About() {
   return (
     <div className="h-screen -mt-32 -mb-10" id="about">
-      <div className="mx-32">
-        <div className="text-4xl font-bold mb-10">About</div>
+      <div className="mx-0 sm:mx-32">
+        <motion.div
+          initial={{ x: -1000 }}
+          whileInView={{ x: 0 }}
+          transition={{
+            type: "spring",
+            stiffness: 120,
+            duration: 0.5,
+            delay: 0.1,
+          }}
+          viewport={{ once: true }}
+          className="text-4xl font-bold mb-10"
+        >
+          About
+        </motion.div>
         <div className="flex items-center">
           <Image
             style={{ borderRadius: "60px", borderWidth: "6px" }}

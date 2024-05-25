@@ -1,5 +1,3 @@
-import { Inter } from "next/font/google";
-import Image from "next/image";
 import Navbar from "@/components/navbar";
 import Welcome from "@/components/welcome";
 import Projects from "@/components/projects";
@@ -8,8 +6,7 @@ import fitnessImg from "../public/fitness-img.png";
 import mediSearchImg from "../public/medisearch-img.png";
 import About from "@/components/about";
 import Footer from "@/components/footer";
-
-const inter = Inter({ subsets: ["latin"] });
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
@@ -17,10 +14,22 @@ export default function Home() {
       <Navbar />
       <Welcome />
       <div className="h-screen pt-16">
-        <div className="text-4xl mx-32 font-bold mb-10" id="projects">
+        <motion.div
+          initial={{ x: -1000 }}
+          whileInView={{ x: 0 }}
+          transition={{
+            type: "spring",
+            stiffness: 120,
+            duration: 0.5,
+            delay: 0.1,
+          }}
+          viewport={{ once: true }}
+          className="text-4xl mx-0 font-bold mb-10 sm:mx-32"
+          id="projects"
+        >
           Projects
-        </div>
-        <div className="mx-32 flex justify-between">
+        </motion.div>
+        <div className="mx-0 sm:mx-32 flex sm:flex-row flex-col justify-between">
           <Projects
             projectImage={snapChefImg}
             project={{

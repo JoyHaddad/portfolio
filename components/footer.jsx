@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <div className="mx-32">
+    <div className="mx-0 sm:mx-32">
       <hr className="bg-custom-pink" id="contact" />
       <br />
       <div className="flex justify-center">

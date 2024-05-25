@@ -14,7 +14,7 @@ module.exports = {
         "custom-pink": "#E1AFD1",
       },
       backgroundImage: {
-        "hero-pattern": "url('/hello-bg.png')",
+        "hero-pattern": "url('/hello-bg.svg')",
       },
     },
   },
