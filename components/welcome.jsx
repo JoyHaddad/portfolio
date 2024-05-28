@@ -1,3 +1,4 @@
+"use client";
 import React, { useState, useEffect } from "react";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
@@ -35,7 +36,7 @@ export default function Welcome() {
       >
         {startTypeAnimation && (
           <TypeAnimation
-            className="flex justify-center"
+            className="flex justify-center text-4xl sm:text-5xl"
             sequence={[
               "I'm a <developer/>",
               1000,
@@ -46,7 +47,6 @@ export default function Welcome() {
             ]}
             speed={5}
             deletionSpeed={5}
-            style={{ fontSize: "3em" }}
             repeat={Infinity}
           />
         )}

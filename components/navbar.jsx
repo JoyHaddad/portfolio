@@ -1,59 +1,91 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { FiMenu, FiX } from "react-icons/fi";
 
 export default function Navbar() {
-  // Function to handle smooth scrolling
-  const handleScroll = (e, targetId) => {
-    e.preventDefault(); // Prevent the default anchor behavior
-    const targetSection = document.getElementById(targetId);
-    if (targetSection) {
-      targetSection.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
   };
 
   return (
-    <div className="fixed w-screen z-10 flex items-center justify-between p-5 bg-bg-color drop-shadow-lg">
-      <div className="flex items-center w-full mx-24">
-        <a href="/#hero" onClick={(e) => handleScroll(e, "hero")}>
+    <div className="sm:fixed w-screen z-10 md:flex items-center justify-between p-5 bg-bg-color drop-shadow-lg">
+      <div className="flex justify-between">
+        <Image
+          className="md:hidden block drop-shadow-lg"
+          src="/joy-logo.svg"
+          alt="Joy Logo"
+          width={200}
+          height={200}
+          priority
+        />
+        <button className="md:hidden" onClick={toggleMenu}>
+          {isMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+        </button>
+      </div>
+      <div className="flex items-center w-full mx-28">
+        <Link href="/#hero">
           <Image
-            className="drop-shadow-lg"
+            className="hidden md:block drop-shadow-lg"
             src="/joy-logo.svg"
             alt="Joy Logo"
             width={200}
             height={48}
             priority
           />
-        </a>
-        <div className="flex space-x-7 font-bold ml-auto">
-          <a
-            href="/#projects"
-            onClick={(e) => handleScroll(e, "projects")}
-            className="hover:text-custom-light"
-          >
+        </Link>
+        <div className="hidden md:flex space-x-7 font-bold ml-auto">
+          <Link href="/#projects" className="hover:text-custom-light">
             Projects
-          </a>
-          <a
-            href="/#about"
-            onClick={(e) => handleScroll(e, "about")}
-            className="hover:text-custom-light"
-          >
+          </Link>
+          <Link href="/#about" className="hover:text-custom-light">
             About
-          </a>
-          <a
-            href="/#contact"
-            onClick={(e) => handleScroll(e, "contact")}
-            className="hover:text-custom-light"
-          >
+          </Link>
+          <Link href="/#contact" className="hover:text-custom-light">
             Contact
-          </a>
-          <a
+          </Link>
+          <Link
             href="https://storage.googleapis.com/backend-challenge-bucket/JoyHaddad_Resume.pdf"
             className="hover:text-custom-light"
           >
             Resume
-          </a>
+          </Link>
         </div>
       </div>
+      {isMenuOpen && (
+        <div className="flex flex-col items-start font-bold bg-bg-color p-5 absolute top-full left-0 w-full">
+          <Link
+            href="/#projects"
+            className="hover:text-custom-light py-2"
+            onClick={toggleMenu}
+          >
+            Projects
+          </Link>
+          <Link
+            href="/#about"
+            className="hover:text-custom-light py-2"
+            onClick={toggleMenu}
+          >
+            About
+          </Link>
+          <Link
+            href="/#contact"
+            className="hover:text-custom-light py-2"
+            onClick={toggleMenu}
+          >
+            Contact
+          </Link>
+          <Link
+            href="https://storage.googleapis.com/backend-challenge-bucket/JoyHaddad_Resume.pdf"
+            className="hover:text-custom-light py-2"
+            onClick={toggleMenu}
+          >
+            Resume
+          </Link>
+        </div>
+      )}
     </div>
   );
 }
