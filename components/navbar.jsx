@@ -11,7 +11,7 @@ export default function Navbar() {
   };
 
   return (
-    <div className="sm:fixed w-screen z-10 md:flex items-center justify-between p-5 bg-bg-color drop-shadow-lg">
+    <div className="fixed w-screen z-11 md:flex md:items-center md:justify-between sm:p-5 p-2 bg-bg-color drop-shadow-lg">
       <div className="flex justify-between">
         <Image
           className="md:hidden block drop-shadow-lg"
@@ -25,6 +25,7 @@ export default function Navbar() {
           {isMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
         </button>
       </div>
+
       <div className="flex items-center w-full mx-28">
         <Link href="/#hero">
           <Image
@@ -56,6 +57,7 @@ export default function Navbar() {
           </Link>
         </div>
       </div>
+
       {isMenuOpen && (
         <div className="flex flex-col items-start font-bold bg-bg-color p-5 absolute top-full left-0 w-full">
           <Link
