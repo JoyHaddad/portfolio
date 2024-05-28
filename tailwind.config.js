@@ -16,6 +16,13 @@ module.exports = {
       backgroundImage: {
         "hero-pattern": "url('/hello-bg.svg')",
       },
+      fontFamily: {
+        fira: ['"Fira Mono"', "monospace"], // Define the Fira Mono font stack
+      },
+      spacing: {
+        97: "388px", // Adding a custom spacing value for your specific use case
+        82: "330px",
+      },
     },
   },
   plugins: [],
