@@ -55,19 +55,21 @@ export default function About() {
           />
           <br />
           <div className="text-custom-light text-lg font-normal sm:ml-32 ml-0">
-            ♥ I am a <span className="font-bold">Computer Science</span> with
-            Business applications college student
+            ♥ I am a <span className="font-bold">Computer Science </span>
+            graduate with expertise in{" "}
+            <span className="font-bold">fullstack development</span> and{" "}
+            <span className="font-bold">UI/UX design</span>.
             <br />
-            <br />♥ I am a{" "}
-            <span className="font-bold">full-stack web developer</span>. For the
-            front-end I use <span className="font-bold">react</span> and{" "}
-            <span className="font-bold">tailwind css</span> for styling. For the
-            back-end I use{" "}
-            <span className="font-bold">MongoDB, PostgreSQL, Express</span> and{" "}
-            <span className="font-bold">AWS/GCP</span> for cloud storage.
+            <br />♥ I have a solid understanding of{" "}
+            <span className="font-bold">
+              relational database management systems
+            </span>{" "}
+            and experience integrating them with cloud platforms such as{" "}
+            <span className="font-bold">AWS</span> and{" "}
+            <span className="font-bold">GCP</span>
             <br />
-            <br />♥ In my free time I like to play piano, sing and play video
-            games.
+            <br />♥ In my free time I like to play violin, piano, sing and play
+            video games.
           </div>
         </div>
         <div className="flex flex-col sm:flex-row">

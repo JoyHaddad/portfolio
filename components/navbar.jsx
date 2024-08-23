@@ -11,14 +11,14 @@ export default function Navbar() {
   };
 
   return (
-    <div className="fixed w-screen z-11 md:flex md:items-center md:justify-between sm:p-5 p-2 bg-bg-color drop-shadow-lg">
+    <div className="fixed w-screen z-50 md:flex md:items-center md:justify-between md:p-5 p-2 bg-bg-color drop-shadow-lg">
       <div className="flex justify-between">
         <Image
           className="md:hidden block drop-shadow-lg"
           src="/joy-logo.svg"
           alt="Joy Logo"
-          width={200}
-          height={200}
+          width={180}
+          height={180}
           priority
         />
         <button className="md:hidden" onClick={toggleMenu}>
@@ -59,7 +59,7 @@ export default function Navbar() {
       </div>
 
       {isMenuOpen && (
-        <div className="flex flex-col items-start font-bold bg-bg-color p-5 absolute top-full left-0 w-full">
+        <div className="flex flex-col items-start font-bold bg-bg-color p-5 top-full left-0 w-full">
           <Link
             href="/#projects"
             className="hover:text-custom-light py-2"
