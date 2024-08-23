@@ -10,7 +10,7 @@ import { motion } from "framer-motion";
 
 export default function Home() {
   return (
-    <main className="font-fira">
+    <main className="font-fira" id="hero">
       <Navbar />
       <Welcome />
       <div className="sm:h-screen pb-16 sm:pb-0 pt-16">
