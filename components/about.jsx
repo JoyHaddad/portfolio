@@ -47,10 +47,10 @@ export default function About() {
           <Image
             style={{ borderRadius: "60px", borderWidth: "6px" }}
             className="border border-4 border-custom-dark max-w-sm"
-            src="/joy-about.svg"
+            src="/joy-about.jpg"
             alt="Joy photo"
-            width={380}
-            height={200}
+            width={500}
+            height={400}
             priority
           />
           <br />

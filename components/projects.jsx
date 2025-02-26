@@ -19,7 +19,7 @@ export default function Projects({ project, projectImage }) {
         <br />
         <Image
           className="rounded-xl"
-          src={projectImage} // Assuming 'logo' is a valid URL
+          src={projectImage}
           alt="Project Image"
           width={450}
           height={450}

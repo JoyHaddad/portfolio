@@ -48,7 +48,7 @@ export default function Navbar() {
             Contact
           </Link>
           <Link
-            href="https://storage.googleapis.com/backend-challenge-bucket/JoyHaddad_Resume.pdf"
+            href="/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-custom-light"
