@@ -82,7 +82,7 @@ export default function Navbar() {
             Contact
           </Link>
           <Link
-            href="https://storage.googleapis.com/backend-challenge-bucket/JoyHaddad_Resume.pdf"
+            href="/resume.pdf"
             className="hover:text-custom-light py-2"
             onClick={toggleMenu}
           >
