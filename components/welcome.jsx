@@ -21,7 +21,7 @@ export default function Welcome() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.5, duration: 1 }}
       >
-        <div className="flex justify-center font-bold text-4xl pt-80">
+        <div className="flex justify-center font-bold text-3xl sm:text-4xl pt-80">
           Hello, I'm
         </div>
         <div className="flex justify-center font-bold text-5xl text-custom-light">
@@ -36,7 +36,7 @@ export default function Welcome() {
       >
         {startTypeAnimation && (
           <TypeAnimation
-            className="flex justify-center text-4xl sm:text-5xl"
+            className="flex justify-center text-3xl sm:text-5xl"
             sequence={[
               "I'm a <developer/>",
               1000,

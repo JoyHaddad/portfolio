@@ -10,14 +10,6 @@
   --background-end-rgb: 173, 136, 198;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    --foreground-rgb: 76, 70, 118;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
   font-family: "Fira Mono", monospace; /* Set Fira Mono as the default font */
   color: rgb(var(--foreground-rgb));
